@@ -1,6 +1,22 @@
 {
-    "pages": [
-        // pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    "pages": [{
+            "path": "pages/sign/index",
+            "style": {
+                "navigationBarTitleText": "签到首页"
+            }
+        },
+        {
+            "path": "pages/finger/index",
+            "style": {
+                "navigationBarTitleText": "指纹识别页面"
+            }
+        },
+        {
+            "path": "pages/my/index",
+            "style": {
+                "navigationBarTitleText": "我的页面"
+            }
+        },
         {
             "path": "pages/tabBar/component/component",
             "style": {
@@ -84,7 +100,7 @@
                 "navigationBarTitleText": "swiper"
             }
         },
-        // #ifndef MP-TOUTIAO
+
         {
             "path": "pages/component/cover-view/cover-view",
             "style": {
@@ -97,7 +113,7 @@
                 "navigationBarTitleText": "movable-view"
             }
         },
-        // #endif
+
         {
             "path": "pages/component/text/text",
             "style": {
@@ -185,14 +201,14 @@
                 "navigationBarTitleText": "textarea"
             }
         },
-        // #ifdef APP-PLUS || MP-WEIXIN
+
         {
             "path": "pages/component/editor/editor",
             "style": {
                 "navigationBarTitleText": "editor"
             }
         },
-        // #endif
+
         {
             "path": "pages/component/navigator/navigator",
             "style": {
@@ -217,30 +233,28 @@
                 "navigationBarTitleText": "image"
             }
         },
-        // #ifndef MP-ALIPAY
+
         {
             "path": "pages/component/video/video",
             "style": {
                 "navigationBarTitleText": "video"
             }
         },
-        // #endif
-        // #ifndef MP-ALIPAY || MP-TOUTIAO
+
         {
             "path": "pages/component/audio/audio",
             "style": {
                 "navigationBarTitleText": "audio"
             }
         },
-        // #endif
-        // #ifndef MP-TOUTIAO
+
         {
             "path": "pages/component/map/map",
             "style": {
                 "navigationBarTitleText": "map"
             }
         },
-        // #endif
+
         {
             "path": "pages/component/canvas/canvas",
             "style": {
@@ -253,12 +267,12 @@
                 "navigationBarTitleText": "web-view"
             }
         },
-        // #ifdef APP-PLUS
+
         {
             "path": "pages/component/web-view-local/web-view-local",
             "style": {}
         },
-        // #endif
+
         {
             "path": "platforms/app-plus/speech/speech",
             "style": {
@@ -289,14 +303,14 @@
                 "navigationBarTitleText": "摇一摇"
             }
         },
-        // #ifdef H5 || APP-PLUS
+
         {
             "path": "pages/about/about",
             "style": {
                 "navigationBarTitleText": "关于"
             }
         },
-        // #endif
+
         {
             "path": "platforms/app-plus/feedback/feedback",
             "style": {
@@ -312,7 +326,7 @@
                         "navigationBarTitleText": "授权登录"
                     }
                 },
-                // #ifdef APP-PLUS
+
                 {
                     "path": "subnvue/subnvue",
                     "style": {
@@ -354,7 +368,7 @@
                         }
                     }
                 },
-                // #endif
+
                 {
                     "path": "get-user-info/get-user-info",
                     "style": {
@@ -416,14 +430,14 @@
                         "navigationBarTitleText": "节点信息"
                     }
                 },
-                // #ifdef APP-PLUS || MP-WEIXIN || MP-BAIDU || H5 || MP-QQ
+
                 {
                     "path": "intersection-observer/intersection-observer",
                     "style": {
                         "navigationBarTitleText": "节点布局相交状态"
                     }
                 },
-                // #endif
+
                 {
                     "path": "canvas/canvas",
                     "style": {
@@ -544,22 +558,21 @@
                         "navigationBarTitleText": "文件"
                     }
                 },
-                // #ifndef MP-QQ || MP-TOUTIAO
+
                 {
                     "path": "map/map",
                     "style": {
                         "navigationBarTitleText": "map"
                     }
                 },
-                // #endif
-                // #ifdef APP-PLUS
+
                 {
                     "path": "map-search/map-search",
                     "style": {
                         "navigationBarTitleText": "map search"
                     }
                 },
-                // #endif
+
                 {
                     "path": "get-location/get-location",
                     "style": {
@@ -572,14 +585,14 @@
                         "navigationBarTitleText": "查看位置"
                     }
                 },
-                // #ifndef MP-TOUTIAO
+
                 {
                     "path": "choose-location/choose-location",
                     "style": {
                         "navigationBarTitleText": "使用地图选择位置"
                     }
                 },
-                // #endif
+
                 {
                     "path": "storage/storage",
                     "style": {
@@ -592,23 +605,21 @@
                         "navigationBarTitleText": "SQLite"
                     }
                 },
-                // #ifndef H5
+
                 {
                     "path": "brightness/brightness",
                     "style": {
                         "navigationBarTitleText": "屏幕亮度"
                     }
                 },
-                // #endif
-                // #ifndef H5 || MP-ALIPAY
+
                 {
                     "path": "save-media/save-media",
                     "style": {
                         "navigationBarTitleText": "保存媒体到本地"
                     }
                 },
-                // #endif
-                // #ifdef APP-PLUS || MP-WEIXIN || MP-QQ
+
                 {
                     "path": "bluetooth/bluetooth",
                     "style": {
@@ -621,15 +632,14 @@
                         "navigationBarTitleText": "指纹"
                     }
                 },
-                // #endif
-                // #ifdef APP-PLUS || MP-WEIXIN
+
                 {
                     "path": "ibeacon/ibeacon",
                     "style": {
                         "navigationBarTitleText": "iBeacon"
                     }
                 },
-                // #endif
+
                 {
                     "path": "vibrate/vibrate",
                     "style": {
@@ -845,7 +855,7 @@
                         "onReachBottomDistance": 20
                     }
                 },
-                // #ifdef APP-PLUS || MP-WEIXIN || H5 || MP-QQ
+
                 {
                     "path": "uparse-md/uparse-md",
                     "style": {
@@ -858,28 +868,28 @@
                         "navigationBarTitleText": "富文本渲染示例-html"
                     }
                 },
-                // #endif
+
                 {
                     "path": "ucharts/ucharts",
                     "style": {
                         "navigationBarTitleText": "uCharts 图表"
                     }
                 },
-                // #ifdef APP-PLUS || H5 || MP-WEIXIN || MP-QQ
+
                 {
                     "path": "gesture-lock/gesture-lock",
                     "style": {
                         "navigationBarTitleText": "手势图案锁屏"
                     }
                 },
-                // #endif
+
                 {
                     "path": "nav-default/nav-default",
                     "style": {
                         "navigationBarTitleText": "默认导航栏"
                     }
                 },
-                // #ifdef APP-PLUS || H5
+
                 {
                     "path": "nav-transparent/nav-transparent",
                     "style": {
@@ -908,8 +918,7 @@
                         }
                     }
                 },
-                // #endif
-                // #ifdef APP-PLUS
+
                 {
                     "path": "nav-image/nav-image",
                     "style": {
@@ -930,8 +939,7 @@
                         }
                     }
                 },
-                // #endif
-                // #ifdef APP-PLUS || H5
+
                 {
                     "path": "nav-city-dropdown/nav-city-dropdown",
                     "style": {
@@ -1021,7 +1029,7 @@
                         }
                     }
                 },
-                // #endif
+
                 {
                     "path": "mpvue-picker/mpvue-picker",
                     "style": {
@@ -1079,7 +1087,7 @@
                         "navigationBarTitleText": "详情页面"
                     }
                 },
-                // #ifdef APP-PLUS || H5 || MP-WEIXIN || MP-QQ
+
                 {
                     "path": "swiper-vertical/swiper-vertical",
                     "style": {
@@ -1089,7 +1097,7 @@
                         }
                     }
                 },
-                // #endif
+
                 {
                     "path": "media-list/media-list",
                     "style": {
@@ -1142,7 +1150,7 @@
                         "navigationBarTitleText": "时间轴 timeline"
                     }
                 },
-                // #ifdef APP-PLUS || MP-WEIXIN || MP-QQ
+
                 {
                     "path": "vant-button/vant-button",
                     "style": {
@@ -1152,19 +1160,18 @@
                         }
                     }
                 },
-                // #endif
+
                 {
                     "path": "datachecker/datachecker",
                     "style": {
                         "navigationBarTitleText": "表单校验"
                     }
+                }, {
+                    "path": "global/global",
+                    "style": {
+                        "navigationBarTitleText": "GlobalData和vuex"
+                    }
                 }
-				,{
-				    "path" : "global/global",
-				    "style" : {
-						"navigationBarTitleText": "GlobalData和vuex"
-					}
-				}
             ]
         }
     ],
@@ -1176,7 +1183,7 @@
         "backgroundColorTop": "#F4F5F6",
         "backgroundColorBottom": "#F4F5F6",
         "app-plus": {
-          "animationType": "pop-in"
+            "animationType": "pop-in"
         }
     },
     "tabBar": {
