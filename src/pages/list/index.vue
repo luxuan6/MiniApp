@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import signList from '../../common/signList.vue'
+import signList from '../../components/signList.vue'
 import {mapState, mapMutations, mapActions} from 'vuex'
 export default {
   components:{

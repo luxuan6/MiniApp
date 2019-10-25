@@ -30,6 +30,7 @@
       <button @click="goSign">去打卡</button>
       <button @click="giveup">放弃面试</button>
     </section>
+    <span>导航</span>
   </div>
 </template>
 
@@ -58,11 +59,9 @@ export default {
       wx.makePhoneCall({ phoneNumber: this.info.phone });
     },
     goSign(){
-      // wx.showToast({
-        // title: '功能正在紧急开发中', //提示的内容,
-        // icon: 'none', //图标,
-      // });
-      wx.navigateTo({ url: '/pages/sign/sign/main' });
+
+      console.log('this.info',this.info)
+      wx.navigateTo({ url: `/pages/clockIn/index?company=${this.info.company}&address=${JSON.stringify(this.info.address)}` });
     },
     giveup(){
       wx.showModal({
@@ -89,6 +88,7 @@ export default {
   onLoad(options){
     // 获取id
     this.id = options.id;
+    
     // 把view属性加到响应监听里面
     this.$set(this.data, 'view', options.view || false)
   },
@@ -98,11 +98,14 @@ export default {
       mask: true, //显示透明蒙层，防止触摸穿透,
     });
     await this.getDetail(this.id);
+    console.log('info....',this.info)
     // 修改标题
     wx.setNavigationBarTitle({ title: this.info.company });
     wx.hideLoading();
+    
   },
   onShareAppMessage() {
+    console.log('info....',this.info)
     return {
       title: this.info.company+'的面试',
       path: '/pages/sign/detail/main?view=1&id='+this.id,

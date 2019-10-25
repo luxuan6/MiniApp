@@ -1,6 +1,7 @@
 <template>
     <div class="wrap">
        <map name="map" show-location=true :longitude="longitude" :latitude="latitude"></map>
+       
     </div>
 </template>
 
@@ -15,8 +16,8 @@ export default {
     },
     methods: {
         // goTabBar(){
-        //     uni.switchTab({
-        //         url: '/pages/tabBar/component/component'
+        //     uni.redirectTo({
+        //         url: '/pages/add/indx'
         //     })
         // }
     },
@@ -28,7 +29,7 @@ export default {
             return;
         }
         
-         // 实例化API核心类
+        //  实例化API核心类
         let qqmapsdk = new QQMapWX({
             key: 'ZVUBZ-J46CU-7IPVI-2N6M4-2EIRV-V7FCM'
         });

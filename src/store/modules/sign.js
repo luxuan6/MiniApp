@@ -65,16 +65,17 @@ const actions = {
     getDetail({ commit }, payload) {
         return new Promise(async(resolve, reject) => {
             let data = await getSignDetail(payload);
+
+            if (data.address) {
+                data.address = JSON.parse(data.address);
+            }
+            data.start_time = Number(data.start_time);
             console.log('data...', data)
-                //     if (data.data.address) {
-                //         data.data.address = JSON.parse(data.data.address);
-                //     }
-                //     data.data.start_time = formatTime(data.data.start_time);
-                //     commit('updateState', { info: data.data });
-                //     resolve();
+            commit('updateState', { info: data });
+            resolve();
         })
     },
-    
+
     // 更新面试状态
     updateDetail({ commit, dispatch }, payload) {
         return new Promise(async(resolve, reject) => {

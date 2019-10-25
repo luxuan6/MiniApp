@@ -28,6 +28,7 @@
           size="24">
         </icon>
       </li>
+      
        <li>
         <lable for="">面试地址</lable>
         <input @tap="goSearch" type="text" disabled v-model="current.address.address" placeholder="请选择面试地址">
