@@ -49,7 +49,6 @@ const actions = {
                 item.start_time = item.start_time * 1;
 
             });
-
             console.log('state...', state)
                 // 判断是替换还是追加
             if (state.page === 1) {
