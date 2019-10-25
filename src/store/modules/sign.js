@@ -74,6 +74,7 @@ const actions = {
                 //     resolve();
         })
     },
+    
     // 更新面试状态
     updateDetail({ commit, dispatch }, payload) {
         return new Promise(async(resolve, reject) => {
