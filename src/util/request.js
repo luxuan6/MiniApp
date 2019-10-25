@@ -11,6 +11,7 @@ fly.config = {
 //添加请求拦截器
 fly.interceptors.request.use((request) => {
     //给所有请求添加自定义header
+    console.log(store.state.user)
     if (store.state.user.openid) {
         request.headers["openid"] = store.state.user.openid;
     }
@@ -29,7 +30,7 @@ fly.interceptors.request.use((request) => {
 //添加响应拦截器，响应拦截器会在then/catch处理之前执行
 fly.interceptors.response.use(
     (response) => {
-        console.log('response...', response);
+
         //只将请求结果的data字段返回
         if (response.data.code != 0) {
             wx.showToast({

@@ -14,7 +14,7 @@ const mutations = {
 const actions = {
     async login({ commit }, params) {
         let data = await code2session(params);
-        console.log('data...', data);
+        // console.log('data...', data);
         if (data.openid) {
             commit('updateOpenid', data.openid);
         }
@@ -25,12 +25,10 @@ const actions = {
         let data = await fingerVerify(params);
         return data && data.code;
     },
+
     async decryptPhone({ commit }, params) {
-        // params.openid = openid;
-        console.log('params...', params)
         let data = await decryptPhone(params);
-        console.log('data...', data)
-            // return data.code;
+        console.log('data...', data);
     }
 };
 
